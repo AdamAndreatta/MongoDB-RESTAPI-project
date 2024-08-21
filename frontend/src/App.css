@@ -1,0 +1,381 @@
+/*   ----- Variables  -----  */
+/*  ===== MOBILE styles (reside at the top and are inherited by all devices) ===== */
+/*  ===== See tablet, desktop, and print @media queries at the bottom. */
+
+
+/*   ----- Imports  -----  */
+  /* @import 'node_modules/modern-normalize/modern-normalize.css';  npm install modern-normalize  Resets elements for browser consistency.  https://www.npmjs.com/package/modern-normalize */         
+  /* @import "component1.css";   Component-specific stylesheets, if any.   */
+  /* @import url(//fonts.googleapis.com/css?family=Font+Name); Add fonts from a hosted services like Google Fonts.   */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&family=PT+Serif:ital,wght@0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500&family=PT+Serif:ital,wght@0,700;1,400&display=swap');
+:root {
+    --custom-color-baby-blue:rgb(109,167,242,.75);
+    --custom-color-forest-green: #027373;
+    --custom-color-light-blue: rgb(133,191,242);
+    --custom-color-blue-green: #025959;
+    --custom-color-peach: rgb(242,217,187,.75);
+  }
+  
+  /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+  body {       /* Can alternatively define in html {}. */
+    background-image:url(images/background-image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    font-family:'Oswald', sans-serif;
+    font-weight: 400;
+    margin:3px;
+    padding:3px;
+    max-width: 2500px;
+  }
+  
+  /*  ----- Page layout blocks -----  */
+  header {
+    background-color: var(--custom-color-baby-blue);
+    color: var(--custom-color-blue-green);
+    margin: 10px;
+    margin-top: 5px;
+    padding-top: 5px;
+    padding: 5px, 5px;
+    border-radius: 20px;
+    text-align: center;
+    border-style: solid;
+  }
+  header img{
+    width: 70px;
+    padding-top: 10px;
+  }
+  main {
+    background-color: var(--custom-color-peach);
+    color: var(--custom-color-blue-green);
+    margin: 10px;
+    padding: 5px;
+    border-radius: 20px;
+    border-style: solid;
+  }
+  /* section {}
+  article {}
+    #topic1 {}
+    #topic2 {}
+  div {}
+  aside {} */
+  footer {
+    background-color: var(--custom-color-peach);
+    color: var(--custom-color-light-blue);
+    border-radius: 15px;
+    margin: 5px;
+  }
+  footer p {
+    color: var(--custom-color-baby-blue);
+    border-style: solid;
+    border-radius: 20px;
+    border-color: var(--custom-color-forest-green);
+  }
+  
+  /* ----- Anchors ----- Text links */
+  /* a {
+    
+  }
+  a:link {}
+  a:hover {}
+  a:active {}
+  a:visited {} */
+  
+  /*  ----- Navigation ----- Override text links for navigation only.  */
+
+
+nav {
+    display: flex;
+}
+
+nav a {
+    background-color:var(--custom-color-forest-green);
+    color: #BBBF4B;
+    width: 115px;
+    height: 25px;
+    padding: 10px;
+    margin: 15px;
+    /* margin-left: 5px; */
+    border-radius: 15px;
+    word-break: break-all;
+    text-decoration: none;
+    font-size: medium;
+  }
+
+nav a:hover {
+    background-color: var(--custom-color-baby-blue);
+    color: purple;
+}
+
+.local nav {
+  display: flex;
+}
+.local a{
+  display: inline-block;
+  background-color: purple;
+  flex-flow: wrap;
+}
+.local :hover{
+  background-color:var(--custom-color-baby-blue);
+  color: purple;
+}
+.gallery{
+  display: flex;
+  flex-flow: row wrap;
+  margin:0;
+  padding: 0;
+  font-size: large;
+}
+  
+.gallery figure{
+  border-width: 5px;
+  border-style: solid;
+  display: flex;
+  flex-direction: column;
+}
+.gallery img{
+  display: flex;
+  flex-grow: .25;
+}
+
+
+   -----  Typography  ----- 
+  p {}
+  br {}
+  ol, ul, dl {}
+  li {}
+  dt {}
+  dd {}
+  
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 800;
+    text-decoration: underline;
+  } 
+  h1 {
+    color: var(--custom-color-forest-green);
+    font-family: 'Bebas Neue', sans-serif;
+  }
+  h2 {
+    color: var(--custom-color-baby-blue);
+    font-family: 'Bebas Neue', sans-serif;
+  }
+  h3 {
+    color: var(--custom-color-baby-blue);
+    font-family: 'Bebas Neue', sans-serif;
+  }
+  h4 {}
+  h5 {}
+  h6 {}
+  
+  /*bbr {}
+  acronym {}
+  address {}
+  blockquote {}
+    q {}
+    cite {}
+  em {}
+  hr {}
+  mark {}
+  s {}
+  span {}
+  strong {}
+  sub {}
+  sup {}
+  time {}
+  
+  /*  ----- Coding or instructional typography -----
+  pre {}
+  code {}
+  kbd {}
+  samp {}
+  var {}
+  del {} 
+  ins {}
+  */
+    ----- Table ----- 
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  caption {
+    color: var(--custom-color-forest-green);
+    font-weight: bold;
+    font-size: medium;
+    text-align: left;
+    padding: 1% 0;
+  }
+  thead {
+  }
+  tbody {
+    text-align: center;
+  }
+  tfoot {}
+  tr {
+    padding: 1%;
+    text-align: left;
+    font-size: larger;
+
+    padding: 5px;
+  }
+  tr:nth-child(even) {}
+  th {
+    padding: 5px;
+    padding-right: 15px;
+    text-align: left;
+  }
+  td {
+    text-align: left;
+    padding-right: 10px;
+  }
+    td:nth-child(1) {
+      text-align: left;
+    }
+  /* colgroup {}
+  data {}
+  datalist {} */
+
+  
+   ----- Form ----- 
+  form {
+    color: var(--custom-color-forest-green);
+  }
+  fieldset {
+    border-style: solid;
+    border-color: blue;
+    padding: 30px;
+    margin: 30px;
+  }
+    legend {
+      font-size: larger;
+      padding: 15px;
+    }
+
+  label {
+    display: block;
+  }
+  label input[type="text"]{
+    display: block;
+    padding: 5px;
+  }
+  label input[type="email"]{
+    display: block;
+    padding: 5px;
+  }
+  label input[type="number"]{
+    display: block;
+    padding: 5px;
+    padding-bottom: 5px;
+  }
+
+  button{
+    width: 200px;
+    height: 40px;
+    font-size: medium;
+  }
+  button:hover{
+    color: purple;
+    background-color: silver;
+  }
+
+  input {
+   font-family: Tahoma, sans-serif;
+   padding: 5px;
+  }
+  input[type = "text"]{
+    width: 90%;
+    height: 10px;
+    font-size: large;
+  }
+  input[type="email"]{
+    width: 95%;
+    height: 50px;
+    font-size: large;
+  }
+  input[type="radio"]{
+    width: 30px;
+    height: 20px;
+  }
+  input[type="checkbox"]{
+    width: 30px;
+    height: 20px;
+  }
+  input[type="number"]{
+    width: 85%;
+    height: 10px;
+    padding: 5px;
+    font-size: large;
+    appearance: textfield;
+  }
+
+
+  select {
+    font-family: Tahoma, sans-serif;
+    width: 200px;
+    height: 40px;
+    font-size: medium
+  }
+    /* optgroup {}
+    option {} */
+  textarea {
+    width: 95%;
+    height: 120px;
+    border: 3px solid #cccccc;
+    padding: 5px;
+    font-family: Tahoma, sans-serif;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+  }
+  /* output {}
+  meter {}
+  progress {}
+   */
+  
+  /* ----- Media ----- 
+  figure {}
+    figcaption {}
+    figure img {}
+  svg {}
+  picture {}
+    source {}
+  iframe {}
+  video {}
+  audio {}
+  embed {}
+  object {}
+  
+  /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  
+  .gallery {}
+  
+  .floatright {}
+  .floatleft {}
+  .center-middle {}
+  
+  .ten {}
+  .twenty {}
+  .thirty {}
+  .forty {}
+  .fifty {}
+  .sixty {}
+  .seventy {}
+  .eighty {}
+  
+  .radius {}
+  .circle {}
+  .boxshadow {}
+  .tshadow {} 
+  .gradient {}
+  .shape {}
+  *\
+  @keyframes App-logo {}
+  
+  /*   ===== TABLET  media query overrides mobile styles ===== */
+  @media all and (min-width: 600px) {}
+  
+  /*   ===== DESKTOP  media query overrides mobile and tablet styles ===== */
+  @media all and (min-width: 1080px) {}
+  
+  /*   ===== PRINT  media query overrides previous styles =====  */
+  @media print {}
